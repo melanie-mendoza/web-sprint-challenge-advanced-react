@@ -30,13 +30,35 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. Explain how to build stateful class components.
 
+Stateful logic is when we define our initial state and we use a function to change our state. We create class components by using extends the React.Component parent class. We also use constructor() and render() inside the component.
+
+
 2. Describe the different phases of the component lifecycle.
+
+React lifecycle are series of events that happen from the birth of a React component to its death.
+Mounting – Birth of the component
+Update – Growth of the component
+Unmount – Death of the component
+
 
 3. Demonstrate an understanding of class component lifecycle methods.
 
+The render() method  - is the most used lifecycle method; render() is the only required method within a class component in React.
+componentDidMount() - is called as soon as the component is mounted and ready. This is a good place to initiate API calls, if we need to load data from a remote endpoint.
+This lifecycle method is invoked as soon as the updating happens. The most common use case for the componentDidUpdate() method is updating the DOM in response to prop or state changes.
+componentWillUnmount() - As the name suggests this lifecycle method is called just before the component is unmounted and destroyed. If there are any cleanup actions that you would need to do, this would be the right spot.
+
+
 4. Define stateful logic.
 
+Stateful logic is logic that is built into a component. It can be a function that handles a click event or maybe a function that sets toggle state, or even a function that formats data before it gets displayed. Usually, this kind of logic deals with state in the component. Thus the moniker “stateful logic.”
+
+
 5. Describe how to test a React component with React Testing Library.
+
+React Testing Library allows the developer to test with the whole user experience. It uses jest to create a testing environment to run the tests and uses RTL to assert the tests.
+Three kinds of query: Get, Find, Query.
+
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
@@ -133,8 +155,4 @@ test("displays plants in cart", () => {
 
 ## Submission format
 
-Follow these steps for completing your project.
 
-- [ ] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's Repo). **Please don't merge your own pull request**
-- [ ] Add your team lead as a reviewer on the pull-request
-- [ ] Your team lead will count the project as complete after receiving your pull-request
